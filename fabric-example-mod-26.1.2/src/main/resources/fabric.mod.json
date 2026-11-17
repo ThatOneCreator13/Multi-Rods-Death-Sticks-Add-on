@@ -1,0 +1,41 @@
+
+{
+	"schemaVersion": 1,
+	"id": "mr-deathsticks-c",
+	"version": "v1.1.0-mc26.1.2",
+	"name": "MR-Death-Sticks-Creative",
+	"description": "This mod is an add-on for Multi-Rods that adds custom Orbital Strike Cannons",
+	"authors": [
+		"ThatOneCreator13, Chat GPT"
+	],
+	"contact": {
+		"homepage": "https://fabricmc.net/",
+		"sources": "https://github.com/FabricMC/fabric-example-mod"
+	},
+	"license": "CC0-1.0",
+	"icon": "assets/deathsticks/icon.png",
+	"environment": "*",
+	"entrypoints": {
+		"main": [
+			"com.thatonecreator13.ExampleMod",
+			"com.thatonecreator13.commands.DeathSticksCommand"
+		],
+		"client": [
+			"com.thatonecreator13.client.ExampleModClient"
+		]
+	},
+	"mixins": [
+		"modid.mixins.json",
+		{
+			"config": "modid.client.mixins.json",
+			"environment": "client"
+		}
+	],
+	"depends": {
+		"fabricloader": ">=0.19.5",
+		"minecraft": "~26.1.2",
+		"java": ">=25",
+		"fabric-api": "*",
+		"multirods": ">=1.2.1"
+	}
+}
